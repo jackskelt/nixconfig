@@ -72,6 +72,8 @@
     wget
     git
     kitty
+    lf
+    lazygit
   ];
 
   # Hyprland
