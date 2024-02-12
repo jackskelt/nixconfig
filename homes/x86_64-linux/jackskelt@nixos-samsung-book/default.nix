@@ -13,9 +13,14 @@
       kb_layout = "br";
     };
 
+    exec-once = [
+      "bash ~/.config/hypr/start.sh"
+    ];
+
     bind = [
-      "$mod, Q, exec, $terminal"
-      "$mod, M, exit"
+      "$mod, Q, exec, $terminal" # Open terminal
+      "$mod, M, exit" # Exit Wayland
+      "$mod, S, exec, rofi -show drun -show-icons" # Open App Bar
     ];
    };
   };

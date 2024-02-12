@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../../users/jackskelt.nix
     ];
 
   # Bootloader.
@@ -54,30 +55,51 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jackskelt = {
-    isNormalUser = true;
-    description = "JackSkelt";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
   # Allow unfree packages
   # nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    helix # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # Utils
+    helix 
     wget
     git
     kitty
     lf
     lazygit
+    # System bar
+    waybar
+    # Notification
+    dunst
+    libnotify
+    # Wallpaper
+    swww
+    # App Launcher
+    rofi-wayland
+    # Network Manager Applet
+    networkmanagerapplet
+    # Browser
+    floorp
   ];
 
   # Hyprland
   programs.hyprland.enable = true;
+
+  # Application Interface Communication
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  # Enable sound with pipewire
+  sound.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
