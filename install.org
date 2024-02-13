@@ -1,0 +1,13 @@
+# Install notes for myself
+
+Git clone to `/etc/nixos/`
+
+Create `hardware-configuration.nix` inside `/etc/nixos/system`
+```bash
+sudo nixos-generate-config --show-hardware-config > /etc/nixos/system/hardware-configuration.nix
+  
+```
+
+Change `flake.nix` as you wish
+
+...
