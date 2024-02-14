@@ -17,7 +17,7 @@
       name = "JackSkelt";
       email = "contact@jackskelt.me";
       term = "kitty";
-      theme = "spaceduck";
+      theme = "atelier-cave";
       browser = "floorp";
       font = "Azaret Mono";
       fontPkg = pkgs.azeret-mono;
@@ -67,10 +67,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.11";
 
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix/release-23.11";
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";

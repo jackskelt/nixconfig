@@ -74,7 +74,7 @@ in
     };
     ".config/kdeglobals".source = config.lib.stylix.colors {
       template = builtins.readFile ./Trolltech.conf.mustache;
-      extesion = "";
+      extension = "";
     };
     ".config/qt5ct/qt5ct.conf".text = pkgs.lib.mkBefore (builtins.readFile ./qt5ct.conf);
   };

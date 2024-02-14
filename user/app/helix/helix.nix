@@ -3,11 +3,13 @@
 {
   home.packages = [ pkgs.helix ];
 
-  packages.helix.settings = {
-    theme = "catppuccin_mocha";
+  programs.helix.enable = true;
+  
+  programs.helix.settings = {
+    theme = "base16_default";
     editor = {
       line-number = "relative";
-      mouse = "false";
+      mouse = false;
       bufferline = "multiple";
       shell = ["fish" "-c"];
     };

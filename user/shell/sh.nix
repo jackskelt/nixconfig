@@ -2,10 +2,10 @@
 let
   myAliases = {
     ls = "eza --icons -l -T -L=1";
+    lg = "lazygit";
     cat = "bat";
     htop = "btm";
     fd = "fd -Lu";
-    neofetch = "disfetch";
     fetch = "disfetch";
     gitfetch = "onefetch";
     nixos-rebuild = "systemd-run --no-ask-password --uid=0 --system --scope -p MemoryLimit=6000M -p CPUQuota=60% nixos-rebuild";
@@ -21,7 +21,7 @@ in
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = true;
+    shellAliases = myAliases;
   };
 
   home.packages = with pkgs; [
@@ -32,5 +32,4 @@ in
   ];
 
   programs.direnv.enable = true;
-  programs.direnv.enableFishIntegration = true;
 }

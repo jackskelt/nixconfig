@@ -17,5 +17,6 @@
     fzf
     pandoc
     httpie
+    lazygit
   ];
 }

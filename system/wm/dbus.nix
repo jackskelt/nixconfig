@@ -3,7 +3,7 @@
 {
   services.dbus = {
     enable = true;
-    packages = [ pkgs.dconfig ];
+    packages = [ pkgs.dconf ];
   };
 
   programs.dconf = {

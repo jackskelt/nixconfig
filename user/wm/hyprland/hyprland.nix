@@ -41,7 +41,23 @@
         resize_on_border = true
         gaps_in = 7
         gaps_out = 7
+      }
 
+      plugin {
+        hyprbars {
+          bar_height = 0
+          bar_color = 0xee${config.lib.stylix.colors.base00}
+          col.text = 0xff${config.lib.stylix.colors.base05}
+          bar_text_font = ${userSettings.font}
+          bar_text_size = 12
+          buttons {
+            button_size = 0
+            col.maximize = 0xff${config.lib.stylix.colors.base0A}
+            col.close = 0xff${config.lib.stylix.colors.base08}
+          }
+        }
+      }
+      
         # Window alternator
         bind=SUPER,SPACE,fullscreen,1
         bind=ALT,TAB,cyclenext
@@ -62,8 +78,8 @@
         # Kill waybar
         bind=SUPERCTRL,R,exec,killall .waybar-wrapped && waybar & disown
 
-        # Init fuzzel (SUPER + /)
-        bind=SUPER,code:47,exec,fuzzel
+        # Init fuzzel 
+        bind=SUPER,SPACE,exec,fuzzel
 
         # Dismiss notification
         bind=SUPER,X,exec,fnottctl dismiss
@@ -170,7 +186,7 @@
         windowrulev2 = size 86% 40%,$pavucontrol
         windowrulev2 = move 50% 6%,$pavucontrol
         windowrulev2 = workspace special silent,$pavucontrol
-        windowrulev2 = opacity 0.80,$pavucontrol
+        windowrulev2 = opacity 0.8,$pavucontrol
 
         layerrule = blur,waybar
 
@@ -190,7 +206,7 @@
         # Monitors/Screens
         monitor=eDP-1,1920x1080,0x0,1
 
-
+      
 
         xwayland {
           force_zero_scaling = true
@@ -202,7 +218,7 @@
           kb_layout = br
           kb_options = caps:escape
           repeat_delay = 350
-          repeat_rate = 50
+          repeat_rate = 30
           accel_profile = adaptive
           follow_mouse = 2
 
@@ -211,25 +227,28 @@
           }
         }
 
-        misc {
-          mouse_move_enables_dpms = false
+        gestures {
+          workspace_swipe = true;
         }
 
+        misc {
+          mouse_move_enables_dpms = false
+          disable_hyprland_logo = true
+        }
+      
         decoration {
           rounding = 8
           blur {
-            enable = true
+            enabled = true
             size = 5
             passes = 2
             ignore_opacity = true
             contrast = 1.17
-            brightness = 0.8
           }
         }
-      }
     '';
     xwayland = { enable = true; };
-    systemdIntegration = true;
+    systemd.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -242,7 +261,7 @@
     gnome.zenity
     wlr-randr
     wtype
-    ydotoll
+    ydotool
     wl-clipboard
     hyprland-protocols
     hyprpicker
@@ -254,7 +273,7 @@
     wev
     grim
     slurp
-    libsFroQt5.qt5.qtwayland
+    libsForQt5.qt5.qtwayland
     qt6.qtwayland
     xdg-utils
     xdg-desktop-portal
@@ -671,8 +690,6 @@
       background-size: auto 100%;
     }
   '';
-  services.udiskie.enable = true;
-  services.udiskie.tray = "always";
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;

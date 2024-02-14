@@ -61,6 +61,11 @@
     fish
     git
     home-manager
+    lazygit
+    lf
+    starship
+    eza
+    bat
   ];
 
   # I use fish btw
