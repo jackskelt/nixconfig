@@ -106,23 +106,23 @@
         bind=SUPERCTRL,code:107,exec,grim
 
         # Volume
-        bind=,AUDIOLOWERVOLUME,exec,pamixer -d 10
-        bind=,AUDIOINCREASEVOLUME,exec,pamixer -i 10
-        bind=,AUDIOMUTE,exec,pamixer -t
-        bind=SHIFT,AUDIOMUTE,exec,pamixer --default-source -t
-        bind=SHIFT,AUDIOLOWERVOLUME,exec,pamixer --default-source -d 10
-        bind=SHIFT,AUDIOINCREASEVOLUME,exec,pamixer --default-source -i 10
+        bind=,code:122,exec,pamixer -d 10
+        bind=,code:123,exec,pamixer -i 10
+        bind=,code:121,exec,pamixer -t
+        bind=SHIFT,code:121,exec,pamixer --default-source -t
+        bind=SHIFT,code:122,exec,pamixer --default-source -d 10
+        bind=SHIFT,code:123,exec,pamixer --default-source -i 10
 
         # Brightness
-        bind=,MONBRIGHTNESSUP,exec,brightnessctl set +15
-        bind=,MONBRIGHTNESSDOWN,exec,brightnessctrl set 15-
+        bind=,code:233,exec,brightnessctl set +15%
+        bind=,code:232,exec,brightnessctl set 15%-
 
         # Color picker
         bind=SUPER,C,exec,wl-copy $(hyprpicker)
 
         # Suspend
-        bind=,STANDBY,exec,swaylock --grace 0
-        bind=SUPER,STANDBY,exec,swaylock --grace 0 & sleep 1 && systemctl suspend
+        # bind=,STANDBY,exec,swaylock --grace 0
+        # bind=SUPER,STANDBY,exec,swaylock --grace 0 & sleep 1 && systemctl suspend
 
         # Window focus
         bind=SUPER,H,movefocus,l
@@ -191,8 +191,8 @@
         layerrule = blur,waybar
 
         # Zoom
-        bind=SUPER,code:21,exec,pypr zoom
-        bind=SUPER,code:21,exec,hyprctl reload
+        bind=SUPER,backslash,exec,pypr zoom
+        bind=SUPER,backslash,exec,hyprctl reload
 
         # Change workspace
         bind=SUPERCTRL,right,workspace,+1

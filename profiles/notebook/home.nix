@@ -28,6 +28,7 @@
     kitty
     git
     floorp
+    wev
 
     # Media
     vlc
