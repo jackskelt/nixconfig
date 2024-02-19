@@ -11,6 +11,7 @@
   imports = [
     stylix.homeManagerModules.stylix
     ../../user/app/browser/floorp.nix # Default Browser
+    ../../user/app/browser/qutebrowser.nix # Qute Browser
     ../../user/app/git/git.nix # Git configuration
     ../../user/app/helix/helix.nix # Code editor
     ../../user/app/terminal/kitty.nix # Default terminal
@@ -20,6 +21,7 @@
     ../../user/style/stylix.nix # Customization
     ../../user/shell/sh.nix # Fish and bash config
     ../../user/wm/hyprland/hyprland.nix # Window Manager
+    ../../user/app/util/discord.nix # Discord :D
   ];
 
   home.packages = with pkgs; [
@@ -29,6 +31,7 @@
     git
     floorp
     wev
+    nil
 
     # Media
     vlc
