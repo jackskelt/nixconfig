@@ -12,6 +12,7 @@
     ../../system/security/gpg.nix
     ../../system/wm/hyprland.nix # Window Manager
     ../../system/style/stylix.nix
+    ../../system/container/docker.nix
   ];
 
   # Enable nix flakes
@@ -49,7 +50,7 @@
   users.users.${userSettings.username} = {
     isNormalUser = true;
     description = userSettings.name;
-    extraGroups = [ "networkmanager" "wheel"];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = [];
     uid = 1000;
   };
