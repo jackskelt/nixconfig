@@ -9,6 +9,7 @@
     ./bar/waybar.nix
     ./screen_locker/swaylock.nix
     ./app_launcher/fuzzel.nix
+    ./app_launcher/fuzzmoji/fuzzmoji.nix
     ./notification/fnott.nix
   ];
 
@@ -123,6 +124,9 @@
 
         # Color picker
         bind=SUPER,C,exec,wl-copy $(hyprpicker)
+
+        # Emoji picker
+        bind=SUPER,code:60,exec,fuzzmoji
 
         # Suspend
         # bind=,STANDBY,exec,swaylock --grace 0
