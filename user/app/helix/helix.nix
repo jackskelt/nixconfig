@@ -6,7 +6,7 @@
   programs.helix.enable = true;
   
   programs.helix.settings = {
-    theme = "base16_default";
+    theme = "catppuccin_mocha";
     editor = {
       line-number = "relative";
       mouse = false;
