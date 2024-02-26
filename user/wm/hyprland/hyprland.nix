@@ -64,7 +64,7 @@
       }
       
         # Window alternator
-        bind=SUPER,SPACE,fullscreen,1
+        bind=SUPER,F,fullscreen,1
         bind=ALT,TAB,cyclenext
         bind=ALT,TAB,bringactivetotop
         bind=ALTSHIFT,TAB,cyclenext,prev
