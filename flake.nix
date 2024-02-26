@@ -1,7 +1,7 @@
 {
   description = "Flake of JackSkelt"; # Inspired by librephoenix
 
-  outputs = { self, nixpkgs, stylix, hyprland-plugins, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, stylix, hyprland-plugins, home-manager, spicetify-nix, ... }@inputs:
 
   let
     systemSettings = {
@@ -46,6 +46,7 @@
           inherit userSettings;
           inherit (inputs) stylix;
           inherit (inputs) hyprland-plugins;
+          inherit (inputs) spicetify-nix;
         };
       };
     };
@@ -76,5 +77,7 @@
       url = "github:hyprwm/hyprland-plugins";
       flake = false;
     };
+
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 }
