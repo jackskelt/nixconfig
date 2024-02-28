@@ -196,6 +196,9 @@
         windowrulev2 = workspace special silent,$pavucontrol
         windowrulev2 = opacity 0.8,$pavucontrol
 
+        $vscode = class:^(Code)$
+        windowrulev2 = opacity 0.8,$vscode
+
         layerrule = blur,waybar
 
         # Zoom

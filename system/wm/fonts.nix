@@ -5,6 +5,7 @@
     (nerdfonts.override { fonts = [ "Inconsolata" ];})
     powerline
     inconsolata
+    inter
     inconsolata-nerdfont
     iosevka
     font-awesome

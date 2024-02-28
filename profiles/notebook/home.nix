@@ -23,6 +23,7 @@
     ../../user/wm/hyprland/hyprland.nix # Window Manager
     ../../user/app/util/discord.nix # Discord :D
     ../../user/app/spotify/spicetify.nix # Spotify + Spicetify = <3
+    ../../user/app/vscode/vscode.nix # Visual Studio Code
   ];
 
   home.packages = with pkgs; [
