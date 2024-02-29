@@ -227,7 +227,6 @@
 
         input {
           kb_layout = br
-          kb_options = caps:escape
           repeat_delay = 350
           repeat_rate = 30
           accel_profile = adaptive

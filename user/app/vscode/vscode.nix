@@ -1,7 +1,7 @@
 { pkgs, ...}:
 
 {
-   home.sessionVariables.NIXOS_OZONE_WL = "1"; # Wayland
+   # home.sessionVariables.NIXOS_OZONE_WL = "1"; # Wayland
 
    programs.vscode = {
     enable = true;
@@ -11,6 +11,7 @@
       jnoortheen.nix-ide
       tamasfe.even-better-toml
       usernamehw.errorlens
+      mkhl.direnv
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "miguelsolorio";
