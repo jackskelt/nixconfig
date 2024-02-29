@@ -12,6 +12,7 @@
       tamasfe.even-better-toml
       usernamehw.errorlens
       mkhl.direnv
+      yzhang.markdown-all-in-one
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "miguelsolorio";
@@ -24,6 +25,12 @@
         name = "symbols";
         version = "0.0.16";
         sha256 = "sha256-LGCeqleDGWveJ7KPYd6+ArynEpET4xrhvI2H4NPuCtQ=";
+      }
+      {
+        publisher = "serayuzgur";
+        name = "crates";
+        version = "0.6.6";
+        sha256 = "sha256-HXoH1IgMLniq0kxHs2snym4rerScu9qCqUaqwEC+O/E=";
       }
     ];
     keybindings = [
