@@ -81,7 +81,8 @@ c.url.searchengines = {'DEFAULT': 'https://startpage.com/do/search?query={}',
                        'gl'     : 'https://gitlab.com/search?search={}&nav_source=navbar',
                        'np'     : 'https://github.com/search?q=repo%3ANixOS%2Fnixpkgs%20{}&type=code',
                        'wk'     : 'https://en.wikipedia.org/w/index.php?fulltext=1&search={}&title=Special%3ASearch&ns0=1',
-                       'no'     : 'https://search.nixos.org/options?channel=23.11&size=50&sort=relevance&query={}'
+                       'no'     : 'https://search.nixos.org/options?channel=23.11&size=50&sort=relevance&query={}',
+                       'cr'     : 'https://crates.io/search?q={}'
                       }
 
 config.set('completion.open_categories',["searchengines","quickmarks","bookmarks"])
