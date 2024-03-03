@@ -6,7 +6,8 @@
     (import ../../app/dmenu-scripts/networkmanager-dmenu.nix {
       dmenu_command = "fuzzel -d"; inherit config lib pkgs;
     })
-    ./bar/waybar.nix
+    # ./bar/waybar.nix
+    ./bar/waybar_custom.nix
     ./screen_locker/swaylock.nix
     ./app_launcher/fuzzel.nix
     ./app_launcher/fuzzmoji/fuzzmoji.nix
@@ -48,20 +49,20 @@
         gaps_out = 7
       }
 
-      plugin {
-        hyprbars {
-          bar_height = 0
-          bar_color = 0xee${config.lib.stylix.colors.base00}
-          col.text = 0xff${config.lib.stylix.colors.base05}
-          bar_text_font = ${userSettings.font}
-          bar_text_size = 12
-          buttons {
-            button_size = 0
-            col.maximize = 0xff${config.lib.stylix.colors.base0A}
-            col.close = 0xff${config.lib.stylix.colors.base08}
-          }
-        }
-      }
+      # plugin {
+      #   hyprbars {
+      #     bar_height = 0
+      #     bar_color = 0xee${config.lib.stylix.colors.base00}
+      #     col.text = 0xff${config.lib.stylix.colors.base05}
+      #     bar_text_font = ${userSettings.font}
+      #     bar_text_size = 12
+      #     buttons {
+      #       button_size = 0
+      #       col.maximize = 0xff${config.lib.stylix.colors.base0A}
+      #       col.close = 0xff${config.lib.stylix.colors.base08}
+      #     }
+      #   }
+      # }
       
         # Window alternator
         bind=SUPER,F,fullscreen,1
@@ -199,7 +200,7 @@
         $vscode = class:^(Code)$
         windowrulev2 = opacity 0.8,$vscode
 
-        layerrule = blur,waybar
+        # layerrule = blur,waybar
 
         # Zoom
         bind=SUPER,backslash,exec,pypr zoom
