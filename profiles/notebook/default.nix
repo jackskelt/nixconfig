@@ -9,6 +9,7 @@
     ../../system/hardware/power.nix
     ../../system/security/doas.nix
     ../../system/security/firewall.nix
+    ../../system/security/automount.nix
     ../../system/security/gpg.nix
     ../../system/wm/hyprland.nix # Window Manager
     ../../system/style/stylix.nix
