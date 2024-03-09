@@ -39,7 +39,10 @@ in
             "kitty > (.*)" = "🐱 $1";
             "discord > (.*) - Discord" = "󰙯  $1";
             ".* > (.*) - qutebrowser" = "  $1";
-            ".* > (.*) - floorp" = "  $1";
+            "floorp > (.*) -(.*) Ablaze Floorp" = "  $1";
+            "floorp > Ablaze Floorp" = "  New Page";
+            "Code > (.*) - .*" = "󰨞  $1";
+            "spotify > (.*)" = "  $1";
           };
         };
 
@@ -124,7 +127,7 @@ in
         };
 
         cpu = {
-          format = "{usage}%  ";
+          format = "{usage}% 󰘚 ";
         };
 
         bluetooth = {
@@ -149,6 +152,7 @@ in
           "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n󰕒 {bandwidthUpBytes}\n󰇚 {bandwidthDownBytes}\n󰩟 {ipaddr}";
           "tooltip-format-ethernet" = "{ifname}\n󰕒 {bandwidthUpBytes}\n󰇚 {bandwidthDownBytes}\n󰩟 {ipaddr}";
           "tooltip-format-disconnected" = "Disconnected";
+          "on-click" = "networkmanager_dmenu";
         };
 
         "idle_inhibitor" = {
