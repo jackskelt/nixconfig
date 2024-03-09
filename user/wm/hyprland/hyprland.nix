@@ -29,8 +29,6 @@
       exec-once = hyprctl setcursor ${config.gtk.cursorTheme.name} ${builtins.toString config.gtk.cursorTheme.size}
 
       exec-once = pypr
-      exec-once = nm-applet
-      exec-once = blueman-applet
       exec-once = waybar
 
       exec-once = swayidle -w timeout 90 '${config.programs.swaylock.package}/bin/swaylock -f' timeout 120 'suspend-unless-render' resume '${pkgs.hyprland}/bin/hyprctl dispatch dpms on' before-sleep "${config.programs.swaylock.package}/bin/swaylock -f"
@@ -278,6 +276,7 @@
     hyprpicker
     swayidle
     swaybg
+    swayosd
     fnott
     fuzzel
     pinentry-gnome
@@ -352,6 +351,9 @@
       doCheck = false;
     })
   ];
+
+  services.swayosd.enable = true;
+ 
   home.file.".config/hypr/pyprland.json".text = ''
     {
       "pyprland": {
