@@ -38,6 +38,7 @@
     # Media
     vlc
     ffmpeg
+    playerctl
   ];
 
   xdg.enable = true;
