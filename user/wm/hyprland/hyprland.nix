@@ -276,7 +276,6 @@
     hyprpicker
     swayidle
     swaybg
-    swayosd
     fnott
     fuzzel
     pinentry-gnome
@@ -351,8 +350,6 @@
       doCheck = false;
     })
   ];
-
-  services.swayosd.enable = true;
  
   home.file.".config/hypr/pyprland.json".text = ''
     {
