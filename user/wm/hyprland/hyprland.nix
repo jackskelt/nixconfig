@@ -168,7 +168,7 @@
         # Media utils
         bind=CTRL,code:83,exec,playerctl previous
         bind=CTRL,code:84,exec,playerctl play-pause
-        bind=CTRL,code:45,exec,playerctl next
+        bind=CTRL,code:85,exec,playerctl next
 
         # Pypr utils
         bind=SUPER,Z,exec,pypr toggle term && hyprctl dispatch bringactivetotop
