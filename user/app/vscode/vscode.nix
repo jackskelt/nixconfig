@@ -13,6 +13,7 @@
       usernamehw.errorlens
       mkhl.direnv
       yzhang.markdown-all-in-one
+      github.vscode-github-actions
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "miguelsolorio";
