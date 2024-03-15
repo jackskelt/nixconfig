@@ -1,9 +1,7 @@
-{ pkgs, ... }:
+{ pkgs-unstable, ... }:
 
 {
-  home.packages = with pkgs; [
-    (discord.override {
-      withVencord = true;
-    })
+  home.packages = with pkgs-unstable; [
+    vesktop
   ];
 }
