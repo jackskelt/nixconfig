@@ -24,6 +24,7 @@
     ../../user/app/util/discord.nix # Discord :D
     ../../user/app/spotify/spicetify.nix # Spotify + Spicetify = <3
     ../../user/app/vscode/vscode.nix # Visual Studio Code
+    ../../user/app/util/mysql-workbench.nix # MySQL GUI
   ];
 
   home.packages = with pkgs; [
