@@ -14,6 +14,10 @@
       mkhl.direnv
       yzhang.markdown-all-in-one
       github.vscode-github-actions
+      github.copilot
+      github.copilot-chat
+      dbaeumer.vscode-eslint
+      esbenp.prettier-vscode
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "miguelsolorio";
