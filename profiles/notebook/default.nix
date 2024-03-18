@@ -7,6 +7,7 @@
     ../../system/hardware/bluetooth.nix
     ../../system/hardware/printing.nix
     ../../system/hardware/power.nix
+    ../../system/hardware/pen-tablet.nix
     ../../system/security/doas.nix
     ../../system/security/firewall.nix
     ../../system/security/automount.nix
