@@ -102,9 +102,9 @@
         bind=SUPER,T,togglefloating
 
         # Screenshot
-        bind=,code:107,exec,grim -g "$(slurp)" - | wl-copy
-        bind=SHIFT,code:107,exec,grim -g "$(slurp -o)" - | wl-copy
-        bind=SUPER,code:107,exec,grim - | wl-copy
+        bind=,code:107,exec,grim -g "$(slurp)" - | swappy -f -
+        bind=SHIFT,code:107,exec,grim -g "$(slurp -o)" - | swappy -f -
+        bind=SUPER,code:107,exec,grim - | swappy -f -
         bind=CTRL,code:107,exec,grim -g "$(slurp)"
         bind=SHIFTCTRL,code:107,exec,grim -g "$(slurp -o)"
         bind=SUPERCTRL,code:107,exec,grim
@@ -287,6 +287,7 @@
     wev
     grim
     slurp
+    swappy
     libsForQt5.qt5.qtwayland
     qt6.qtwayland
     xdg-utils
