@@ -42,6 +42,9 @@ in
   };
 
   stylix.targets.kitty.enable = true;
+  stylix.targets.gtk.enable = true;
+  stylix.targets.firefox.enable = false;
+
   programs.feh.enable = true;
 
   home.file.".fehbg-stylix".text = ''

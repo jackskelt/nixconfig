@@ -17,7 +17,7 @@
       name = "JackSkelt";
       email = "contact@jackskelt.me";
       term = "kitty";
-      theme = "atelier-cave";
+      theme = "helios";
       browser = "floorp";
       font = "Azaret Mono";
       fontPkg = pkgs.azeret-mono;

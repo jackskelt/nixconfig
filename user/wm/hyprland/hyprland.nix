@@ -20,6 +20,8 @@
     size = 36;
   };
 
+  gtk.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = [ ];
