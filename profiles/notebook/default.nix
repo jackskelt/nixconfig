@@ -69,6 +69,10 @@
     starship
     eza
     bat
+
+    # VPN
+    wireguard-tools
+    openvpn
   ];
 
   # I use fish btw
