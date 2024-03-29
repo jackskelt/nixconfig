@@ -26,6 +26,7 @@
     ../../user/app/vscode/vscode.nix # Visual Studio Code
     ../../user/app/util/mysql-workbench.nix # MySQL GUI
     ../../user/games/osu.nix # Osu!
+    ../../user/app/util/note.nix # Notes stuff
   ];
 
   home.packages = with pkgs; [
