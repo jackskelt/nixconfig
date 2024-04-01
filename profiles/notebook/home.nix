@@ -28,6 +28,7 @@
     ../../user/games/osu.nix # Osu!
     ../../user/app/util/cybersecurity.nix # CyberSecurity stuff
     ../../user/app/util/note.nix # Notes stuff
+    ../../user/langs/c.nix # C Development Tools
   ];
 
   home.packages = with pkgs; [
