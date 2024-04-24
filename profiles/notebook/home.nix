@@ -26,6 +26,7 @@
     ../../user/app/vscode/vscode.nix # Visual Studio Code
     ../../user/app/util/mysql-workbench.nix # MySQL GUI
     ../../user/games/osu.nix # Osu!
+    ../../user/games/clonehero.nix # Clone Hero
     ../../user/app/util/cybersecurity.nix # CyberSecurity stuff
     ../../user/app/util/note.nix # Notes stuff
     ../../user/langs/c.nix # C Development Tools
