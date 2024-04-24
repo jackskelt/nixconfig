@@ -13,5 +13,14 @@
 		metasploit # All-in-one
 		netcat-gnu # TCP & UDP port listener and scanner
 		exiftool # File metadata manipulator
+		thc-hydra # Log-on cracker
+		ncftp # FTP (wtf nix doesn't already have one)
+		binwalk # Find embedded file in image
+		john # John The Ripper - Password Cracker
+		p7zip # Unzip files...
+		unrar # Unzip rar files...
+		steghide # Steganography tool
+		sherlock # Social Media lookup
+		holehe # Check mail usage
 	];
 }
