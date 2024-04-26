@@ -1,7 +1,7 @@
 {
   description = "Flake of JackSkelt"; # Inspired by librephoenix
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, hyprland-plugins, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-master, stylix, hyprland-plugins, home-manager, spicetify-nix, ... }@inputs:
 
   let
     systemSettings = {
@@ -41,6 +41,14 @@
       };
     };
 
+    pkgs-master = import nixpkgs-master {
+      system = systemSettings.system;
+      config = {
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
+      };
+    };
+
     lib = nixpkgs.lib;
 
   in {
@@ -51,6 +59,7 @@
         extraSpecialArgs = {
           inherit pkgs;
           inherit pkgs-unstable;
+          inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;
           inherit (inputs) stylix;
@@ -67,6 +76,7 @@
         specialArgs = {
           inherit pkgs;
           inherit pkgs-unstable;
+          inherit pkgs-master;
           inherit systemSettings;
           inherit userSettings;  
           inherit (inputs) stylix;
@@ -78,6 +88,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/17295213af45fa385c164f959742b2538adbdec7"; # 26/04/2024
 
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

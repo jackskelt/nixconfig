@@ -37,7 +37,6 @@
     fish
     kitty
     git
-    floorp
     wev
     nil
 

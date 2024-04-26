@@ -270,6 +270,22 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-master": {
+      "locked": {
+        "lastModified": 1714155441,
+        "narHash": "sha256-FA1u1hjUjKIs8O1yMT/9BVlU79WEIWxesgljAd8LXag=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "17295213af45fa385c164f959742b2538adbdec7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "17295213af45fa385c164f959742b2538adbdec7",
+        "type": "github"
+      }
+    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1714091391,
@@ -323,6 +339,7 @@
         "home-manager": "home-manager",
         "hyprland-plugins": "hyprland-plugins",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"

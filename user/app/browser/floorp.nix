@@ -1,10 +1,10 @@
-{ pkgs, ...}:
+{ pkgs-master, ...}:
 
 {
-  home.packages = [ pkgs.floorp ];
+  home.packages = [ pkgs-master.floorp ];
 
   home.sessionVariables = {
-    DEFAULT_BROWSER = "${pkgs.floorp}/bin/floorp";
+    DEFAULT_BROWSER = "${pkgs-master.floorp}/bin/floorp";
   };
 
   xdg.mimeApps.defaultApplications = {
