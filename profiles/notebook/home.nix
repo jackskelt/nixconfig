@@ -38,7 +38,10 @@
     kitty
     git
     wev
-    nil
+    nil # Nix LS
+    zip # .zip
+    p7zip # .7z
+    unrar # .rar
 
     # Media
     vlc

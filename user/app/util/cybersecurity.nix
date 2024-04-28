@@ -17,8 +17,6 @@
 		ncftp # FTP (wtf nix doesn't already have one)
 		binwalk # Find embedded file in image
 		john # John The Ripper - Password Cracker
-		p7zip # Unzip files...
-		unrar # Unzip rar files...
 		steghide # Steganography tool
 		sherlock # Social Media lookup
 		holehe # Check mail usage
