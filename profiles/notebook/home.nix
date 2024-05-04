@@ -31,6 +31,7 @@
     ../../user/app/util/note.nix # Notes stuff
     ../../user/langs/c.nix # C Development Tools
     ../../user/app/util/http.nix # HTTP GUI Clients
+    ../../user/app/youtube/youtube-music.nix # Youtube Music
   ];
 
   home.packages = with pkgs; [
