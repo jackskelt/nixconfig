@@ -75,6 +75,8 @@
         "tailwind.config*" = "tailwind.config*, postcss.config*";
         ".env.local" = ".env*";
         ".env" = ".env*";
+        "flake.nix" = "flake.lock";
+        "Cargo.toml" = "Cargo.lock, clippy.toml, rust-toolchain.toml, build.rs";
       };
     };
   };
