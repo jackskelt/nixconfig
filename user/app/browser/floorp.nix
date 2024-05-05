@@ -1,10 +1,10 @@
-{ pkgs-master, ...}:
+{ pkgs-unstable, ...}:
 
 {
-  home.packages = [ pkgs-master.floorp ];
+  home.packages = [ pkgs-unstable.floorp ];
 
   home.sessionVariables = {
-    DEFAULT_BROWSER = "${pkgs-master.floorp}/bin/floorp";
+    DEFAULT_BROWSER = "${pkgs-unstable.floorp}/bin/floorp";
   };
 
   xdg.mimeApps.defaultApplications = {
