@@ -28,8 +28,8 @@ in
     disfetch lolcat cowsay onefetch
     gnugrep gnused
     bat eza bottom fd bc
-    direnv nix-direnv
   ];
 
   programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 }
