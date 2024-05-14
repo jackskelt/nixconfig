@@ -15,6 +15,7 @@
     ../../system/wm/hyprland.nix # Window Manager
     ../../system/style/stylix.nix
     ../../system/container/docker.nix
+    ../../system/container/podman.nix
     ../../system/games/steam.nix
   ];
 
