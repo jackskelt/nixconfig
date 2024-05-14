@@ -18,6 +18,7 @@
       github.copilot-chat
       dbaeumer.vscode-eslint
       esbenp.prettier-vscode
+      skellock.just
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "miguelsolorio";
