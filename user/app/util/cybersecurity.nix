@@ -18,7 +18,9 @@
 		binwalk # Find embedded file in image
 		john # John The Ripper - Password Cracker
 		steghide # Steganography tool
+		zsteg # Steganography image
 		sherlock # Social Media lookup
 		holehe # Check mail usage
+		ghidra # Reverse Engineering
 	];
 }
