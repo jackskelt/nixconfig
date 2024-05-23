@@ -25,6 +25,7 @@
     ../../user/app/spotify/spicetify.nix # Spotify + Spicetify = <3
     ../../user/app/vscode/vscode.nix # Visual Studio Code
     ../../user/app/util/mysql-workbench.nix # MySQL GUI
+    ../../user/app/util/beekeeper.nix # SQL Client
     ../../user/games/osu.nix # Osu!
     ../../user/games/clonehero.nix # Clone Hero
     ../../user/app/util/cybersecurity.nix # CyberSecurity stuff
