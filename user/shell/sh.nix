@@ -1,7 +1,8 @@
-{ pkgs, ...}:
+{ pkgs-unstable, ...}:
 let
   myAliases = {
     ls = "eza --icons -l -T -L=1";
+    cd = "z";
     lg = "lazygit";
     cat = "bat";
     htop = "btm";
@@ -24,12 +25,20 @@ in
     shellAliases = myAliases;
   };
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs-unstable; [
     disfetch lolcat cowsay onefetch
     gnugrep gnused
     bat eza bottom fd bc
   ];
 
-  programs.direnv.enable = true;
-  programs.direnv.nix-direnv.enable = true;
+  programs.zoxide = {
+    enable = true;
+    package = pkgs-unstable.zoxide;
+    enableFishIntegration = true;
+  };
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
 }

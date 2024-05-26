@@ -1,11 +1,10 @@
-{ pkgs, ...}:
+{ pkgs-unstable, ...}:
 
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs-unstable; [
     disfetch neofetch lolcat cowsay onefetch starfetch
     cava
     gnugrep gnused
-    killall
     libnotify
     timer
     bat eza fd bottom ripgrep
@@ -17,11 +16,11 @@
     fzf
     pandoc
     httpie
-    lazygit
   ];
 
   programs.lazygit = {
     enable = true;
+    package = pkgs-unstable.lazygit;
     settings = {
       gui.nerdFontsVersion = "3";
     };
