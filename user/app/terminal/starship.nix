@@ -1,9 +1,10 @@
-{ pkgs, ...}:
+{ pkgs-unstable, ...}:
 
 {
-  home.packages = [ pkgs.starship ];
-
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    package = pkgs-unstable.starship;
+  };
 
   # Install starship in kitty
   programs.fish.interactiveShellInit = "starship init fish | source";
