@@ -16,6 +16,8 @@
     fzf
     pandoc
     httpie
+    file
+    imagemagick
   ];
 
   programs.lazygit = {
